@@ -12,9 +12,24 @@
 ]]--
 
 level = gideros.class(Sprite)
+offset_x = 15
+offset_y = 15
 
 function level:init()
-
+	local matrix = {}
+    for i=1,15 do
+		matrix[i] = {}
+		for j=1,15 do
+			matrix[i][j] = 1
+		end
+    end
+	local grid = Grid.new(matrix,5)
+	for i=1,grid.row do
+		for j=1,grid.column do
+			local m = Match.new(grid.mt[i][j],(i-1)*30+offset_x,(j-1)*30+offset_y)
+			self:addChild(m)
+		end
+    end
 end
 
 --removing event

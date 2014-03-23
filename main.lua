@@ -26,6 +26,7 @@ application:setLogicalDimensions(conf.width, conf.height)
 application:setScaleMode(conf.scaleMode)
 application:setFps(conf.fps)
 application:setKeepAwake(conf.keepAwake)
+imgres = TexturePack.new("images/resource.txt","images/resource.png")
 
 --get new dimensions
 conf.width = application:getContentWidth()
@@ -90,4 +91,4 @@ sceneManager = SceneManager.new({
 stage:addChild(sceneManager)
 
 --start start scene
-sceneManager:changeScene("start", 1, conf.transition, conf.easing)
+sceneManager:changeScene("level", 1, conf.transition, conf.easing)

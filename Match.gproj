@@ -3,6 +3,8 @@
   <imageScales/>
  </properties>
  <folder name="classes">
+  <file source="classes/Match.lua"/>
+  <file source="classes/Grid.lua"/>
   <file source="classes/Music.lua"/>
   <file source="classes/Sounds.lua"/>
   <file source="classes/Settings.lua"/>
@@ -25,6 +27,8 @@
   <file source="audio/main.mp3"/>
  </folder>
  <folder name="images">
+  <file source="images/resource.txt"/>
+  <file source="images/resource.png"/>
   <file source="images/left-down.png"/>
   <file source="images/right-down.png"/>
   <file source="images/left-up.png"/>
@@ -76,4 +80,5 @@
  <file source="level_select.lua"/>
  <file source="pack_select.lua"/>
  <file source="tahoma.ttf"/>
+ <dependency from="level.lua" to="classes/Grid.lua"/>
 </project>
