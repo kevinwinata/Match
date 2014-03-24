@@ -2,16 +2,24 @@ Match = gideros.class(Sprite)
 
 function Match:init(color, i, j)
 	local disp
-	if color == 1 then
+	if color == 0 then
+		disp = Bitmap.new(imgres:getTextureRegion("none.png"))
+		self.color = 0
+	elseif color == 1 then
 		disp = Bitmap.new(imgres:getTextureRegion("red.png"))
+		self.color = 1
 	elseif color == 2 then
 		disp = Bitmap.new(imgres:getTextureRegion("green.png"))
+		self.color = 2
 	elseif color == 3 then
 		disp = Bitmap.new(imgres:getTextureRegion("blue.png"))
+		self.color = 3
 	elseif color == 4 then
 		disp = Bitmap.new(imgres:getTextureRegion("yellow.png"))
+		self.color = 4
 	else
 		disp = Bitmap.new(imgres:getTextureRegion("purple.png"))
+		self.color = 5
 	end
 	self:addChild(disp)
 	self:setPosition((i-1)*30+offset_x,(j-1)*30+offset_y)

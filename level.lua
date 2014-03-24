@@ -11,6 +11,11 @@
 **************************************************************
 ]]--
 
+offset_x = 15
+offset_y = 15
+max_x = 465
+max_y = 465
+	
 level = gideros.class(Sprite)
 
 function level:init()
@@ -22,28 +27,7 @@ function level:init()
 		end
     end
 	local grid = Grid.new(matrix,5)
-	offset_x = 15
-	offset_y = 15
-	max_x = 465
-	max_y = 465
-	for i=1,grid.row do
-		for j=1,grid.column do
-			local m = Match.new(grid.mt[i][j],i,j)
-			m:addEventListener("kiri", function()
-				print("match("..i..","..j..") kiri")
-			end)
-			m:addEventListener("kanan", function()
-				print("match("..i..","..j..") kanan")
-			end)
-			m:addEventListener("atas", function()
-				print("match("..i..","..j..") atas")
-			end)
-			m:addEventListener("bawah", function()
-				print("match("..i..","..j..") bawah")
-			end)
-			self:addChild(m)
-		end
-    end
+	self:addChild(grid)
 end
 
 --removing event
