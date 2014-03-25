@@ -20,9 +20,9 @@ level = gideros.class(Sprite)
 
 function level:init()
 	local matrix = {}
-    for i=1,15 do
+    for i=1,10 do
 		matrix[i] = {}
-		for j=1,15 do
+		for j=1,10 do
 			matrix[i][j] = 1
 		end
     end

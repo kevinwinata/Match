@@ -72,6 +72,7 @@ function Match:onMouseUp(event)
 	if self.focus then
 		self.focus = false
 		self.moved = false
+		--print(self.color)
 		event:stopPropagation()
 	end
 end
